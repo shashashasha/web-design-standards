@@ -9,6 +9,7 @@ linters:
   BorderZero:
     enabled: false
     convention: zero
+  # cant find an analagous rule
   ColorKeyword:
     enabled: true
     severity: warning
@@ -16,12 +17,15 @@ linters:
     enabled: true
   Comment:
     enabled: true
+  # needs custom plugin
   DebugStatement:
     enabled: true
+  # needs custom plugin
   DeclarationOrder:
     enabled: false
   DuplicateProperty:
     enabled: true
+  # needs custom plugin
   ElsePlacement:
     enabled: true
     style: same_line
@@ -30,6 +34,7 @@ linters:
     ignore_single_line_blocks: true
   EmptyRule:
     enabled: true
+  # this should be enforced in the new guide, probably
   FinalNewline:
     enabled: true
     present: true
@@ -45,6 +50,7 @@ linters:
     enabled: true
   ImportantRule:
     enabled: true
+  # custom plugin
   ImportPath:
     enabled: true
     leading_underscore: false
@@ -60,6 +66,7 @@ linters:
   MergeableSelector:
     enabled: true
     force_nesting: true
+  # custom plugin
   NameFormat:
     enabled: true
     allow_leading_underscore: true
@@ -68,8 +75,10 @@ linters:
     enabled: true
     max_depth: 4
     severity: warning
+  # custom plugin
   PlaceholderInExtend:
     enabled: false
+  # custom plugin
   PropertyCount:
     enabled: true
     include_nested: false
@@ -79,6 +88,7 @@ linters:
     ignore_unspecified: false
     severity: warning
     separate_groups: false
+ # custom, seems tough
   PropertySpelling:
     enabled: true
     extra_properties: []
@@ -95,6 +105,7 @@ linters:
   SelectorFormat:
     enabled: false # strict_BEM doesn't seem to be supported by Hound
     convention: strict_BEM
+  # this seems to be all or nothing in stylelint
   Shorthand:
     enabled: true
     allowed_shorthands: [1, 2]
@@ -125,10 +136,13 @@ linters:
     enabled: true
   TrailingZero:
     enabled: false
+  # custom plugin
   UnnecessaryMantissa:
     enabled: true
+  # needs custom
   UnnecessaryParentReference:
     enabled: true
+  # needs custom
   UrlFormat:
     enabled: true
   UrlQuotes:
@@ -144,5 +158,6 @@ linters:
   ZeroUnit:
     enabled: true
     severity: warning
+  # needs custom
   Compass::PropertyWithMixin:
     enabled: false
