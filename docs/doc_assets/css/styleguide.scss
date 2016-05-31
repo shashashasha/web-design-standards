@@ -21,6 +21,10 @@ $site-top:           124px;
   width: 100%;
   z-index: 1;
 
+  @media screen and (min-aspect-ratio: 13/9) {
+    position: absolute;
+  }
+
   a {
     border-bottom: none;
   }
