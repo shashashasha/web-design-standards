@@ -21,6 +21,7 @@ $site-top:           124px;
   width: 100%;
   z-index: 1;
 
+  // Removes fixed header on Android in landscape with an open keyboard
   @media screen and (min-aspect-ratio: 13/9) {
     position: absolute;
   }
