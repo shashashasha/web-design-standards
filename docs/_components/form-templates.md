@@ -2,6 +2,7 @@
 layout: styleguide
 type: component
 title: Form templates
+subheading: UI components
 lead: Patterns for some of the most commonly used forms on government websites
 ---
 
