@@ -2,16 +2,18 @@
 
 var $ = require('jquery');
 var calculateAnchorPosition = require('./components/calculate-anchor-position');
-
+var stickyNav = require('./components/sticky-nav');
 
 $(function (){
   $('.menu-btn, .overlay, .sliding-panel-close').on('click touchstart', function (e) {
     $('.sidenav-mobile, .overlay').toggleClass('is-visible');
     e.preventDefault();
   });
-  require('./components/scroll-to-top-for-hash');
-  require('./components/handle-disabled-lints');
   require('./components/generate-code-snippets');
+  require('./components/handle-disabled-lints');
+  setTimeout(function () {
+    require('./components/scroll-to-top-for-hash');
+  }, 150);
 
 });
 
@@ -69,3 +71,16 @@ $('.sidenav').on('click', 'a', function (e) {
 $('.preview-search-bar .usa-search').submit(function (event){
   event.preventDefault();
 });
+
+function resizeHandler (event) {
+  stickyNav(event);
+}
+
+function scrollHandler (event) {
+  stickyNav(event);
+}
+
+$(window).on('scroll', scrollHandler);
+$(window).on('resize', resizeHandler);
+
+stickyNav();
